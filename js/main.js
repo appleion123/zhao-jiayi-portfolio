@@ -52,7 +52,7 @@ function createCard(w) {
   track.appendChild(fill);
   const timeEl = document.createElement("span");
   timeEl.className = "time";
-  function doPlay() {
+  function doPlay() { labelOverlay.classList.add("fade");
     document.querySelectorAll('.works-item video').forEach(function(v){if(v!==vid&&!v.paused)v.pause()});
     if (startSec != null) vid.currentTime = startSec;
     vid.play();
@@ -90,7 +90,6 @@ function createCard(w) {
     playBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>';
     fill.style.width = "0%";
   });
-  vid.addEventListener('canplay', function(){labelOverlay.classList.add('fade')});
   vid.addEventListener('loadedmetadata', () => {
     if (typeof vid.videoHeight !== "undefined" && vid.videoHeight > vid.videoWidth) {
       vid.style.objectFit = "contain";
