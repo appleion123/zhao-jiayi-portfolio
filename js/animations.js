@@ -8,21 +8,22 @@
   heroTl.fromTo('.content-desc',{y:30,opacity:0},{y:0,opacity:1,duration:0.7,ease:'power2.out'},'-=0.35');
   heroTl.fromTo('.enter',{y:20,opacity:0},{y:0,opacity:1,duration:0.6,ease:'power2.out'},'-=0.2');
   
-  if(window.innerWidth>768){ // Scroll-triggered section animations
+  // Scroll-triggered section animations (lighter on mobile)
+  var mb=window.innerWidth<768;
   document.querySelectorAll('.content-main').forEach(function(sec){
     var tl=gsap.timeline({paused:true});
     
     var title=sec.querySelector('.section-title');
-    if(title) tl.fromTo(title,{y:70,opacity:0},{y:0,opacity:1,duration:0.85,ease:'power3.out'});
+    if(title) tl.fromTo(title,{y:70,opacity:0},{y:0,opacity:1,duration:mb?0.4:0.85,ease:'power3.out'});
     
     var cards=sec.querySelectorAll('.works-item');
-    if(cards.length) tl.fromTo(cards,{y:45,opacity:0},{y:0,opacity:1,duration:0.65,stagger:0.12,ease:'power2.out'},'-=0.25');
+    if(cards.length) tl.fromTo(cards,{y:45,opacity:0},{y:0,opacity:1,duration:mb?0.35:0.65,stagger:mb?0.06:0.12,ease:'power2.out'},'-=0.25');
     
     var sk=sec.querySelectorAll('.skills-list span');
-    if(sk.length) tl.fromTo(sk,{y:25,opacity:0},{y:0,opacity:1,duration:0.4,stagger:0.07,ease:'power2.out'},'-=0.25');
+    if(sk.length) tl.fromTo(sk,{y:25,opacity:0},{y:0,opacity:1,duration:mb?0.25:0.4,stagger:mb?0.04:0.07,ease:'power2.out'},'-=0.25');
     
     var ct=sec.querySelectorAll('.contact-list a, .contact-list span');
-    if(ct.length) tl.fromTo(ct,{y:25,opacity:0},{y:0,opacity:1,duration:0.4,stagger:0.07,ease:'power2.out'},'-=0.25');
+    if(ct.length) tl.fromTo(ct,{y:25,opacity:0},{y:0,opacity:1,duration:mb?0.25:0.4,stagger:mb?0.04:0.07,ease:'power2.out'},'-=0.25');
     
     var obs=new IntersectionObserver(function(entries){
       entries.forEach(function(e){
