@@ -25,16 +25,11 @@ function createCard(w) {
   const vid = document.createElement("video");
   vid.src = file; vid.preload = window.innerWidth < 768 ? "none" : "metadata"; vid.setAttribute("playsinline", "");
   const playIcon = document.createElement("div");
-  const labelOverlay = document.createElement('div');
-  labelOverlay.className = 'thumb-label';
-  labelOverlay.textContent = title;
-
   playIcon.className = "play-icon";
   playIcon.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>';
   const thumb = document.createElement("div");
   thumb.className = "thumb";
   thumb.appendChild(vid);
-  thumb.appendChild(labelOverlay);
   thumb.appendChild(playIcon);
   const label = document.createElement("h3");
   label.textContent = title;
