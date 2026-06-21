@@ -1,4 +1,4 @@
-﻿(function(){
+(function(){
   function check(){if(typeof gsap==='undefined'){setTimeout(check,200);return}
   
   // Hero entrance animation
@@ -8,7 +8,7 @@
   heroTl.fromTo('.content-desc',{y:30,opacity:0},{y:0,opacity:1,duration:0.7,ease:'power2.out'},'-=0.35');
   heroTl.fromTo('.enter',{y:20,opacity:0},{y:0,opacity:1,duration:0.6,ease:'power2.out'},'-=0.2');
   
-  // Scroll-triggered section animations
+  if(window.innerWidth>768){ // Scroll-triggered section animations
   document.querySelectorAll('.content-main').forEach(function(sec){
     var tl=gsap.timeline({paused:true});
     
