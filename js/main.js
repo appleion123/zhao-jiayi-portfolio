@@ -23,7 +23,7 @@ function createCard(w) {
   const card = document.createElement("div");
   card.className = "works-item";
   const vid = document.createElement("video");
-  vid.src = file; vid.preload = window.innerWidth < 768 ? "none" : "metadata"; vid.setAttribute("playsinline", "");
+  vid.src = new URL(file, location.href).href; vid.preload = window.innerWidth < 768 ? "none" : "auto"; vid.setAttribute("playsinline", "");
   const playIcon = document.createElement("div");
   playIcon.className = "play-icon";
   playIcon.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>';
@@ -50,7 +50,7 @@ function createCard(w) {
   function doPlay() { labelOverlay.classList.add("fade");
     document.querySelectorAll('.works-item video').forEach(function(v){if(v!==vid&&!v.paused)v.pause()});
     if (startSec != null) vid.currentTime = startSec;
-    vid.play();
+    vid.play().catch(function(){vid.load();vid.play()});
   }
   function togglePlay() {
     if (vid.paused) { doPlay(); playBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>'; }
