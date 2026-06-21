@@ -1,16 +1,16 @@
 /* Zhao Jiayi Portfolio - main.js | Updated 2026-06-20 */
 ﻿const showcaseWorks = [
-  { title: "Bleeding Edge", desc: "《Bleeding Edge》游戏音效重制项目，涵盖角色技能、环境音效与战斗反馈设计", file: "C:\\Users\\\u7ea2\u7c73\\Videos\\Bleeding Edge \u97f3\u6548\u91cd\u5236.mp4" },
-  { title: "\u300a\u7edd\u533a\u96f6\u300b\u8fc7\u573a\u52a8\u753b", desc: "\u300a\u7edd\u533a\u96f6\u300b\u8fc7\u573a\u52a8\u753b\u58f0\u97f3\u8bbe\u8ba1\u91cd\u5236\uff0c\u7cbe\u7ec6\u8fd8\u539f\u6e38\u620f\u6218\u6597\u97f3\u6548", file: "C:\\Users\\\u7ea2\u7c73\\Videos\\\u3010sound REdesign\u3011\u300a\u7edd\u533a\u96f6\u300b\u300c\u8fc7\u573a\u52a8\u753b\u300d\u58f0\u97f3\u8bbe\u8ba1 final 11.mp4" },
-  { title: "\u52a8\u6f2b\u914d\u97f3\u4e0e\u97f3\u6548\u5236\u4f5c", desc: "\u52a8\u6f2b\u89d2\u8272\u914d\u97f3 \u00b7 \u97f3\u6548\u8bbe\u8ba1\u4e0e\u5236\u4f5c", file: "C:\\Users\\\u7ea2\u7c73\\Documents\\xwechat_files\\wxid_qjllcgv75z5t22_e5df\\msg\\video\\2026-06\\c5a9fa7171d91e8e5859432101e97b28.mp4", startTime: 23 },
-  { title: "\u5e7f\u544a\u7247\u914d\u97f3\u548c\u97f3\u6548\u5236\u4f5c", desc: "\u5546\u4e1a\u5e7f\u544a\u914d\u97f3 \u00b7 \u54c1\u724c\u97f3\u6548\u8bbe\u8ba1 \u00b7 \u540e\u671f\u6df7\u97f3\u5236\u4f5c", file: "C:\\Users\\\u7ea2\u7c73\\Documents\\xwechat_files\\wxid_qjllcgv75z5t22_e5df\\msg\\video\\2026-06\\d7f771304508c4f34d083cae86d18649.mp4" },
-  { title: "\u77ed\u5267\u914d\u97f3\u548c\u97f3\u6548\u5236\u4f5c", desc: "\u77ed\u5267\u89d2\u8272\u914d\u97f3 \u00b7 \u573a\u666f\u97f3\u6548\u8bbe\u8ba1 \u00b7 \u58f0\u97f3\u540e\u671f\u5236\u4f5c", file: "C:\\Users\\\u7ea2\u7c73\\Documents\\xwechat_files\\wxid_qjllcgv75z5t22_e5df\\msg\\video\\2026-06\\fbb21e25e4626ea48d475f19f93d7b13.mp4" }
+  { title: "Bleeding Edge", desc: "《Bleeding Edge》游戏音效重制项目，涵盖角色技能、环境音效与战斗反馈设计", file: "videos/bleeding-edge.mp4" },
+  { title: "\u300a\u7edd\u533a\u96f6\u300b\u8fc7\u573a\u52a8\u753b", desc: "\u300a\u7edd\u533a\u96f6\u300b\u8fc7\u573a\u52a8\u753b\u58f0\u97f3\u8bbe\u8ba1\u91cd\u5236\uff0c\u7cbe\u7ec6\u8fd8\u539f\u6e38\u620f\u6218\u6597\u97f3\u6548", file: "videos/zzz-cutscene.mp4" },
+  { title: "\u52a8\u6f2b\u914d\u97f3\u4e0e\u97f3\u6548\u5236\u4f5c", desc: "\u52a8\u6f2b\u89d2\u8272\u914d\u97f3 \u00b7 \u97f3\u6548\u8bbe\u8ba1\u4e0e\u5236\u4f5c", file: "videos/anime-dub.mp4", startTime: 23 },
+  { title: "\u5e7f\u544a\u7247\u914d\u97f3\u548c\u97f3\u6548\u5236\u4f5c", desc: "\u5546\u4e1a\u5e7f\u544a\u914d\u97f3 \u00b7 \u54c1\u724c\u97f3\u6548\u8bbe\u8ba1 \u00b7 \u540e\u671f\u6df7\u97f3\u5236\u4f5c", file: "videos/commercial-dub.mp4" },
+  { title: "\u77ed\u5267\u914d\u97f3\u548c\u97f3\u6548\u5236\u4f5c", desc: "\u77ed\u5267\u89d2\u8272\u914d\u97f3 \u00b7 \u573a\u666f\u97f3\u6548\u8bbe\u8ba1 \u00b7 \u58f0\u97f3\u540e\u671f\u5236\u4f5c", file: "videos/short-drama.mp4" }
 ];
 const demoWorks = [
-  { title: "\u7edd\u533a\u96f6", desc: "\u300a\u7edd\u533a\u96f6\u300b\u5de5\u7a0b\u6f14\u793a \u00b7 \u97f3\u4e50\u5236\u4f5c\u5de5\u7a0b", file: "C:/Users/\u7ea2\u7c73/Desktop/6\u67083\u65e5 (1)/6\u67083\u65e5 (1).mp4" },
-  { title: "wwise\u6e38\u620f\u4e2d\u95f4\u4ef6\u67b6\u6784", desc: "Wwise\u6e38\u620f\u97f3\u9891\u4e2d\u95f4\u4ef6\u67b6\u6784\u8bbe\u8ba1\u4e0e\u5b9e\u73b0", file: "C:/Users/\u7ea2\u7c73/Desktop/6\u670821\u65e5.mp4" },
-  { title: "\u914d\u4e50\u4f5c\u54c1", desc: "\u539f\u521b\u914d\u4e50 \u00b7 \u97f3\u4e50\u5236\u4f5c \u00b7 \u5f71\u89c6\u914d\u4e50\u8bbe\u8ba1", file: "C:\\Users\\\u7ea2\u7c73\\Documents\\xwechat_files\\wxid_qjllcgv75z5t22_e5df\\msg\\video\\2026-06\\90591fb89701fc2e9a6f269c4b6370bf.mp4" },
-  { title: "\u50cf\u6211\u4eec\u4ece\u524d", desc: "\u300a\u50cf\u6211\u4eec\u4ece\u524d\u300b\u97f3\u4e50\u5236\u4f5c\u5de5\u7a0b\u6f14\u793a\uff0c\u5c55\u793a\u7f16\u66f2\u3001\u6df7\u97f3\u4e0e\u58f0\u97f3\u8bbe\u8ba1\u7684\u5b8c\u6574\u6d41\u7a0b", file: "C:\\Users\\\u7ea2\u7c73\\Videos\\\u50cf\u6211\u4eec\u4ece\u524d \u5de5\u7a0b\u6f14\u793a.mp4" }
+  { title: "\u7edd\u533a\u96f6", desc: "\u300a\u7edd\u533a\u96f6\u300b\u5de5\u7a0b\u6f14\u793a \u00b7 \u97f3\u4e50\u5236\u4f5c\u5de5\u7a0b", file: "videos/zzz-demo.mp4" },
+  { title: "wwise\u6e38\u620f\u4e2d\u95f4\u4ef6\u67b6\u6784", desc: "Wwise\u6e38\u620f\u97f3\u9891\u4e2d\u95f4\u4ef6\u67b6\u6784\u8bbe\u8ba1\u4e0e\u5b9e\u73b0", file: "videos/wwise-demo.mp4" },
+  { title: "\u914d\u4e50\u4f5c\u54c1", desc: "\u539f\u521b\u914d\u4e50 \u00b7 \u97f3\u4e50\u5236\u4f5c \u00b7 \u5f71\u89c6\u914d\u4e50\u8bbe\u8ba1", file: "videos/music-demo.mp4" },
+  { title: "\u50cf\u6211\u4eec\u4ece\u524d", desc: "\u300a\u50cf\u6211\u4eec\u4ece\u524d\u300b\u97f3\u4e50\u5236\u4f5c\u5de5\u7a0b\u6f14\u793a\uff0c\u5c55\u793a\u7f16\u66f2\u3001\u6df7\u97f3\u4e0e\u58f0\u97f3\u8bbe\u8ba1\u7684\u5b8c\u6574\u6d41\u7a0b", file: "videos/xiangwomen-demo.mp4" }
 ];
 
 function formatTime(s) {
@@ -48,7 +48,7 @@ function createCard(w) {
   const timeEl = document.createElement("span");
   timeEl.className = "time";
   function doPlay() {
-      document.querySelectorAll('.works-item video').forEach(function(v){if(v!==vid&&!v.paused)v.pause()});
+    document.querySelectorAll('.works-item video').forEach(function(v){if(v!==vid&&!v.paused)v.pause()});
     if (startSec != null) vid.currentTime = startSec;
     vid.play();
   }
@@ -85,7 +85,7 @@ function createCard(w) {
     playBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3" fill="currentColor" stroke="none"/></svg>';
     fill.style.width = "0%";
   });
-  vid.addEventListener("loadedmetadata", () => {
+  vid.addEventListener('loadedmetadata', () => {
     if (typeof vid.videoHeight !== "undefined" && vid.videoHeight > vid.videoWidth) {
       vid.style.objectFit = "contain";
       vid.style.background = "#111";
@@ -116,6 +116,7 @@ function createCard(w) {
 
 document.getElementById("showcase-grid") && showcaseWorks.forEach(w => document.getElementById("showcase-grid").appendChild(createCard(w)));
 document.getElementById("demo-grid") && demoWorks.forEach(w => document.getElementById("demo-grid").appendChild(createCard(w)));
+
 
 
 
