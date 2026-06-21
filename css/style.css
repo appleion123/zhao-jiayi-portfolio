@@ -37,11 +37,6 @@ a, .masthead-brand { color: inherit; text-decoration: none; }
 .section-title { font-size: 1.6rem; font-weight: 700; color: var(--accent); letter-spacing: 0.08em; margin-bottom: 0.8rem; font-family: Georgia, "Times New Roman", serif; position: relative; padding-bottom: 1rem; }
 .section-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 3rem; height: 2px; background: var(--accent); opacity: 0.5; }
 .content-main .container { padding-top: 1rem; }
-.content-main::before{content:'';position:absolute;border-radius:50%;filter:blur(80px);animation:bgFloat 10s ease-in-out infinite alternate;pointer-events:none;z-index:0}
-#showcase::before{background:var(--accent);width:40%;height:40%;top:-8%;right:-8%;opacity:0.22;animation-duration:12s}
-#demo::before{background:#5ABFBA;width:35%;height:35%;bottom:-10%;left:-5%;opacity:0.18;animation-duration:14s;animation-delay:-3s}
-#skills::before{background:#96E0DC;width:30%;height:30%;top:15%;right:-5%;opacity:0.18;animation-duration:11s;animation-delay:-5s}
-#contact::before{background:#3DAFAA;width:25%;height:25%;bottom:5%;left:10%;opacity:0.16;animation-duration:13s;animation-delay:-7s}
 @keyframes bgFloat{0%{transform:translate(0,0) scale(1)}100%{transform:translate(25px,-15px) scale(1.12)}}
 
 .works-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1px; background: rgba(255,255,255,0.04); }
